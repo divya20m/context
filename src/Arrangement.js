@@ -23,7 +23,7 @@ function Arrangement({ product, onRemove }) {
         console.error("Error removing product: ", error);
       });
   };
-  const [quantity, setQuantity] = useState(1); // Initialize quantity with 1
+  const [quantity, setQuantity] = useState(1);
 
   const handleIncreaseQuantity = () => {
     setQuantity(quantity + 1);
@@ -66,7 +66,7 @@ function Arrangement({ product, onRemove }) {
         <Button onClick={handleDecreaseQuantity}>-</Button>
       </div>
         <div>
-        <p>Subtotal: ${calculateSubtotal()}</p>
+        <p>Subtotal: ₹{calculateSubtotal()}</p>
           <p>shipping= free</p>
         </div>
     </div>
